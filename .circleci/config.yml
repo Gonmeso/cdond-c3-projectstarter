@@ -163,7 +163,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add tar gzip
+            apt add tar gzip
             pip3 install awscli ansible
       - run:
           name: Configure server
