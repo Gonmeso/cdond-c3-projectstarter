@@ -153,7 +153,7 @@ jobs:
 
   configure-infrastructure:
     docker:
-      - image: python:3.9.12-alpine3.15
+      - image: python:3.9.12-slim
     steps:
       - checkout
       - add_ssh_keys:
@@ -163,7 +163,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apt add tar gzip
+            apt install tar gzip
             pip3 install awscli ansible
       - run:
           name: Configure server
