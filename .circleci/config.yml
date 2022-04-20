@@ -163,7 +163,8 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apt install tar gzip openssh-client
+            apt update
+            apt install -y tar gzip openssh-client
             pip3 install awscli ansible
       - run:
           name: Configure server
