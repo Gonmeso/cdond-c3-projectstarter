@@ -17,7 +17,7 @@
     pm2 start npm -- start
   register: out
   args:
-    chdir: somedir/
+    chdir: /opt/app
 
 
 - debug: var=out.stdout_lines
