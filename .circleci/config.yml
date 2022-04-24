@@ -224,7 +224,7 @@ jobs:
           name: Install dependencies
           command: |
             pip3 install awscli ansible
-            apt install -y node
+            apt install -y nodejs
       - run:
           name: Get backend url
           command: |
