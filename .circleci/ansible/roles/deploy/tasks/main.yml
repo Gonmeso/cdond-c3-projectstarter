@@ -1,8 +1,13 @@
 ---
+- name: Create backend dir
+  file:
+    path: /opt/app
+    state: directory
+
 - name: "unzip backend."
   unarchive:
-    src: artifact.tar.gz
-    dest: .
+    src: ~/project/backend/artifact.tar.gz
+    dest: /opt/app
 
 - name: "Start backend"
   become: true
