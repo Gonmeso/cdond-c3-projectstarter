@@ -291,7 +291,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --no-cache curl
+            apk add --no-cache curl awscli
       - run:
           name: Get backend url
           command: |
