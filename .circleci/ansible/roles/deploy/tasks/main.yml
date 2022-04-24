@@ -12,6 +12,7 @@
 - name: "Start backend"
   become: true
   command: |
+    cd /opt/app
     npm install
     pm2 stop default
     pm2 start npm -- start
