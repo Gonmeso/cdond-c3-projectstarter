@@ -285,13 +285,14 @@ jobs:
 
   smoke-test:
     docker:
-      - image: alpine:3.15.4
+      - image: ubuntu:22.04
     steps:
       - checkout
       - run:
           name: Install dependencies
           command: |
-            apk add --no-cache curl awscli
+            apt update
+            apt install -y --no-cache curl awscli
       - run:
           name: Get backend url
           command: |
