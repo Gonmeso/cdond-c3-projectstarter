@@ -293,7 +293,7 @@ jobs:
           name: Install dependencies
           command: |
             apt update
-            apt install -y curl awscli
+            DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y curl awscli
       - run:
           name: Get backend url
           command: |
